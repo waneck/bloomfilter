@@ -12,9 +12,6 @@ class Hashes {
     }
   }
 
-  @:extern inline public static function plain(bytes:Bytes, bitSize:Int, hashes:Int, onHash:Int->Int->Bool) {
-  }
-
   /**
     Murmur3 hash
    **/
