@@ -1,4 +1,4 @@
-$$ Haxe implementation of bloom filters
+## Haxe implementation of bloom filters
 
 Based on https://github.com/Baqend/Orestes-Bloomfilter , uses macros to achieve the best performance possible,
 and still allow customizations.
