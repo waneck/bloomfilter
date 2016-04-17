@@ -43,7 +43,7 @@ class BloomFilterBuilder {
       override public function mayExist(data:bloomfilter.Bytes):Bool {
         var ret = true,
             bits = this.bits;
-        $hashExpr(data, this.bitSize, this.hashes, function(hash) {
+        $hashExpr(data, this.bitSize, this.hashes, function(_,hash) {
           if (bits[hash] == 0) {
             return ret = false;
           } else {
@@ -55,8 +55,9 @@ class BloomFilterBuilder {
 
       override public function add(data:bloomfilter.Bytes):Void {
         var bits = this.bits;
-        $hashExpr(data, this.bitSize, this.hashes, function(hash) {
+        $hashExpr(data, this.bitSize, this.hashes, function(_,hash) {
           bits.set(hash);
+          return true;
         });
       }
     };
