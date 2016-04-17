@@ -1,0 +1,12 @@
+{
+  "name": "bloomfilter",
+  "url": "https://github.com/waneck/bloomfilter",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["bloomfilter","ds","data structures"],
+  "description": "Haxe implementation of Bloom Filters",
+  "releasenote": "Initial release",
+  "version": "0.0.1-alpha",
+  "contributors": ["waneck"],
+}
+
