@@ -1,4 +1,4 @@
-== Haxe implementation of bloom filters
+$$ Haxe implementation of bloom filters
 
 Based on https://github.com/Baqend/Orestes-Bloomfilter , uses macros to achieve the best performance possible,
 and still allow customizations.
@@ -29,7 +29,7 @@ The following options are available:
 ```haxe
 var counting = new bloomfilter.CountingBloomFilter<haxe.Int64, [some.Hash.func]>(...)
 ```
-THe first type parameter is which int type is going to be used (note that the code doesn't perform any check if the type is really an int). The size of the Ints will determine the maximum size that an item can be added before it overflows
+The first type parameter is which int type is going to be used (note that the code doesn't perform any check if the type is really an int). The size of the Ints will determine the maximum size that an item can be added before it overflows
 
 And lastly, there is an implementation o `PosBloomFilter`, which tracks a `position` of where the elements are. This position is made of a bit array that can vary in size according to the type parameter passed (e.g. `Int64` allows 64 positions, normal `Int` allows 32 positions, and so on).
 As with counting bloom filter, this occupies more space proportionally to the bit size chosen. However, differently from `PosBloomFilter`, if the values are well distributed between positions, the amount of false positives will diminish rapidly
